@@ -139,7 +139,7 @@ jobs:
       - npm_test
   release_beta:
     docker:
-      - image: driebit/node-gulp
+      - image: phantasm/node:lts-stretch
     steps:
       - git_checkout_from_cache
       - npm_install
