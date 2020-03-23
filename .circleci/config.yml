@@ -139,7 +139,7 @@ jobs:
       - npm_test
   release_beta:
     docker:
-      - image: zenoss/gulp
+      - image: driebit/node-gulp
     steps:
       - git_checkout_from_cache
       - npm_install
