@@ -41,7 +41,7 @@ commands:
             - npm-v1-
       - run:
           name: Install npm modules
-          command: npm install bower gulp cordova ionic ios-sim &&  npm install
+          command: npm install bower gulp cordova  &&  npm install
       - save_cache:
           name: Save NPM cache
           key: npm-v1-{{ checksum "package.json" }}
@@ -52,7 +52,7 @@ commands:
     steps:
       - run:
           name: "yarn build"
-          command: node_modules/gulp/bin/gulp.js build-desktop --platform=linux --arch=x64
+          command: node_modules/gulp/bin/gulp.js build
   compress:
     description: "Compress"
     steps:
