@@ -41,7 +41,7 @@ commands:
             - npm-v1-
       - run:
           name: Install npm modules
-          command: npm install
+          command: npm install bower gulp cordova ionic ios-sim &&  npm install
       - save_cache:
           name: Save NPM cache
           key: npm-v1-{{ checksum "package.json" }}
